@@ -6,6 +6,13 @@ class Spreadsheet:
         self.col = col
         self.cells = [[0 for i in range(col)] for j in range(row)]
 
+    def getrow(self, idx):
+        return self.cells[idx]
+
+    def getcol(self, idx):
+        for i in self.cells:
+            return i[idx]
+
     def setCellAt(self, row, col, value):
         self.cells[row][col] = value
     
@@ -20,7 +27,7 @@ class Spreadsheet:
     def addColumn(self, index):
         for row in self.cells:
             row.insert(index, 0)
-        self.cols += 1
+        self.col += 1
 
     def removeRow(self, row):
         del self.cells[row]
@@ -35,3 +42,4 @@ class Spreadsheet:
     
     def swapRows(self, row1, row2):
         self.cells[row1], self.cells[row2] = self.cells[row2], self.cells[row1]
+        return self.cells[row1]
