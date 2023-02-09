@@ -2,7 +2,7 @@ from color import Color
 
 class Cell:
     def __init__(self, value, color):
-        self.value = value
+        self.value = str(value)
         self.color = None
 
     def setValue(self, value):
@@ -12,7 +12,7 @@ class Cell:
         self.color = Color(color)
     
     def getValue(self):
-        return self.value
+        return str(self.value)
     
     def getColor(self):
         return self.color
