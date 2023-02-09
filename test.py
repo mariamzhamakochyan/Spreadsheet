@@ -13,14 +13,6 @@ def testgetCellAt(row, col):
     else:
         print("getCellAt: Failed")
 
-# def testaddRow(index):
-#     if spreadsheet.getrow(index) = 
-
-# def testaddColumn(index)
-# def testremoveRow(row)
-# def testremoveColumn(col)
-# def testswapColumns(col1, col2):
-
 def testswapRows(row1, row2):
     if  s.swapRows(row1, row2)==s.getrow(row1):
         print("passed")
@@ -40,17 +32,6 @@ def testsetValue():
     else:
         print("setValue: Failed")
 
-# def testsetColor(color):
-#     if c.getColor(c.setColor(color)) == color:
-#         print("Passed")
-#     else:
-#         print("Failed")
-
-# def testgetColor():
-#     if type(c.getColor()) == int:
-#         print('Passed')
-#     else:
-#         print("Failed")
 
 def testtoInt():
     res = isinstance(c.getValue(), int)
@@ -69,6 +50,24 @@ def testtoDouble():
 def testisData():
     pass
 
+# def testsetColor(color):
+#     if c.getColor(c.setColor(color)) == color:
+#         print("Passed")
+#     else:
+#         print("Failed")
+
+# def testgetColor():
+#     if type(c.getColor()) == int:
+#         print('Passed')
+#     else:
+#         print("Failed")
+# def testaddRow(index):
+#     if spreadsheet.getrow(index) = 
+
+# def testaddColumn(index)
+# def testremoveRow(row)
+# def testremoveColumn(col)
+# def testswapColumns(col1, col2):
 
 c = Cell(3,4)
 s = Spreadsheet(5,5)
