@@ -22,7 +22,7 @@ class Spreadsheet:
     def addRow(self, index):
         self.cells.insert(index, [0 for i in range(self.cols)])
         for i in range(index + 1, self.rows):
-            self.cells[i] = self.matrix[i - 1]
+            self.cells[i] = self.cells[i - 1]
 
     def addColumn(self, index):
         for row in self.cells:
