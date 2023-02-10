@@ -6,23 +6,17 @@ class Spreadsheet:
         self.col = col
         self.cells = [[0 for i in range(col)] for j in range(row)]
 
-    def getrow(self, idx):
-        return self.cells[idx]
+    def setCellAt(self, row, col):
+        self.cells[row][col] = {c.value : co.color}
+        
+    def show(self):
+        return self.cells
 
-    def getcol(self, idx):
-        for i in self.cells:
-            return i[idx]
-
-    def setCellAt(self, row, col, value):
-        self.cells[row][col] = value
-    
     def getCellAt(self, row, col):
         return self.cells[row][col]
-    
+
     def addRow(self, index):
-        self.cells.insert(index, [0 for i in range(self.cols)])
-        for i in range(index + 1, self.rows):
-            self.cells[i] = self.cells[i - 1]
+        self.cells.insert(index, [0 for i in range(self.col)])
 
     def addColumn(self, index):
         for row in self.cells:
