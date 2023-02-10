@@ -2,7 +2,7 @@ class Spreadsheet:
     def __init__(self, row, col):
         self.row = row
         self.col = col
-        self.cells = [[0 for i in range(col)] for j in range(row)]
+        self.cells = [[{'':"white"} for i in range(col)] for j in range(row)]
 
     def setCellAt(self, row, col):
         self.cells[row][col] = {c.value : c.color}
@@ -15,11 +15,11 @@ class Spreadsheet:
         return self.cells[row][col]
 
     def addRow(self, index):
-        self.cells.insert(index, [0 for i in range(self.col)])
+        self.cells.insert(index, [{'':"white"} for i in range(self.col)])
 
     def addColumn(self, index):
         for row in self.cells:
-            row.insert(index, 0)
+            row.insert(index, {'':"white"})
         self.col += 1
 
     def removeRow(self, row):
@@ -36,3 +36,4 @@ class Spreadsheet:
     def swapRows(self, row1, row2):
         self.cells[row1], self.cells[row2] = self.cells[row2], self.cells[row1]
         return self.cells[row1]
+

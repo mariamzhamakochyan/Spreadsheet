@@ -1,8 +1,7 @@
 import main
 
-
 class Cell:
-    def __init__(self, value = 0, color = "white"):
+    def __init__(self, value = '', color = "white"):
         self.value = str(value)
         self.color = color
 
@@ -29,9 +28,6 @@ class Cell:
         pass
 
     def reset(self, row, col):
-        self.value = 0
+        self.value = ''
         self.color = 'white'
         s.setCellAt(row, col)
-        
-
-
