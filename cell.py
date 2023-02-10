@@ -1,32 +1,35 @@
 from color import Color
 
 class Cell:
-    def __init__(self, value, color):
+    def __init__(self, value = 0, color = "white"):
         self.value = str(value)
         self.color = Color(color)
 
     def setValue(self, value):
         self.value = str(value)
-
-    def setColor(self, color):
-        self.color = Color(color)
-
     
     def getValue(self):
         return str(self.value)
-    
+
+    def setColor(self, color = "white"):
+        if co.sColor(color):
+            self.color = color
+   
     def getColor(self):
         return self.color
     
     def toInt(self):
-        return int(self.value)
+        return int(c.value)
 
     def toDouble(self):
-        return float(self.value)
+        return float(c.value)
     
     def toDate(self):
         pass
 
     def reset(self):
-        self.value = 0
-        self.color = 'white'
+        c.value = 0
+        c.color = 'white'
+
+c = Cell(32)
+
