@@ -37,3 +37,4 @@ class Spreadsheet:
     def swapRows(self, row1, row2):
         self.cells[row1], self.cells[row2] = self.cells[row2], self.cells[row1]
         return self.cells[row1]
+s = Spreadsheet(3,4)
