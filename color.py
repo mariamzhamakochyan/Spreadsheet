@@ -5,3 +5,11 @@ class Color:
     
     def getColor(self):
         return self.colors[self.color]
+    
+    def setColor(self, color = "white"):
+        if color in self.colors:
+            self.color == color
+        else:
+            print("We dont have that color yet")
+
+co = Color()
