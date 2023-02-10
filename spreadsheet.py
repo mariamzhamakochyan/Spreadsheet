@@ -1,5 +1,3 @@
-from cell  import Cell
-
 class Spreadsheet:
     def __init__(self, row, col):
         self.row = row
@@ -7,10 +5,11 @@ class Spreadsheet:
         self.cells = [[0 for i in range(col)] for j in range(row)]
 
     def setCellAt(self, row, col):
-        self.cells[row][col] = {c.value : co.color}
+        self.cells[row][col] = {c.value : c.color}
         
     def show(self):
-        return self.cells
+        for i in self.cells:
+            print('\t'.join(map(str, i)))
 
     def getCellAt(self, row, col):
         return self.cells[row][col]
@@ -37,4 +36,3 @@ class Spreadsheet:
     def swapRows(self, row1, row2):
         self.cells[row1], self.cells[row2] = self.cells[row2], self.cells[row1]
         return self.cells[row1]
-s = Spreadsheet(3,4)

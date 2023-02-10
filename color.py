@@ -1,3 +1,6 @@
+import main
+
+
 class Color:
     def __init__(self, color = 'white'):
         self.color = color
@@ -12,5 +15,5 @@ class Color:
         else:
             print("We dont have that color yet")
 
-co = Color()
+
 

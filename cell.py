@@ -1,9 +1,10 @@
-from color import Color
+import main
+
 
 class Cell:
     def __init__(self, value = 0, color = "white"):
         self.value = str(value)
-        self.color = Color(color)
+        self.color = color
 
     def setValue(self, value):
         self.value = str(value)
@@ -11,7 +12,7 @@ class Cell:
     def getValue(self):
         return str(self.value)
 
-    def setColor(self, color = "white"):
+    def setColor(self, color):
         if co.sColor(color):
             self.color = color
    
@@ -27,9 +28,10 @@ class Cell:
     def toDate(self):
         pass
 
-    def reset(self):
-        c.value = 0
-        c.color = 'white'
+    def reset(self, row, col):
+        self.value = 0
+        self.color = 'white'
+        s.setCellAt(row, col)
+        
 
-c = Cell(32)
 
