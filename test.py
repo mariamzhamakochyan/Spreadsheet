@@ -1,18 +1,77 @@
-import main
+from cell import Cell
+from spreadsheet import Spreadsheet
+from color import Color
 
-
+#setValue function turn any argument into a string
 def testsetValue(value):
-    if isinstance(value, str):
+    if isinstance(c.setValue(value), str):
         print("Test setValue: passed")
     else:
         print("Test setValue: Failed")
 
+def testgetValue():
+    if c.getValue() == c.value:
+         print("Test getValue: passed")
+    else:
+        print("Test getValue: Failed")
 
-# def testsetCellAt(row, col, value):
-#     if s.getCellAt(row, col) == value:
-#         print("setValue: Passed")
+def testsetColor(color): 
+    if color in co.colors:
+        print("Test setColor: passed")
+    else:
+        print("Test setColor: Failed")
+
+def testgetColor():
+    if c.getColor() == c.color:
+         print("Test getColor: passed")
+    else:
+        print("Test getColor: Failed")
+
+def testtoInt():
+    if isinstance(c.toInt(), int):
+        print("Test toInt: passed")
+    else:
+        print("Test toInt: Failed")
+
+def testtoDouble():
+    if isinstance(c.toDouble(), float):
+        print("Test toDouble: passed")
+    else:
+        print("Test toDouble: Failed")
+
+def testreset():
+    pass
+
+# def testsetCellAt(row, col):
+#     if s.setCellAt(row, col) == s.cl:
+#         print("testsetCellAt: Passed")
 #     else:
-#         print("setValue: Failed")
+#         print("testsetCellAt: Failed") 
+    
+
+
+
+
+s = Spreadsheet(3,4)
+co = Color()
+c = Cell()
+
+testsetValue("12")
+testgetValue()
+testsetColor("blue")
+# testgetColor()
+# testtoInt()
+# testtoDouble()
+# testsetCellAt(0,0)
+s.show()
+
+
+
+
+
+
+
+
 
 # def testgetCellAt(row, col):
 #     if s.getCellAt(row, col) == s.cells[row][col]:
@@ -99,3 +158,8 @@ def testsetValue(value):
 # testtoDouble()
 # testswapRows(2, 1)
 # testsetColor()
+# def testsetCellAt(row, col, value):
+#     if s.getCellAt(row, col) == value:
+#         print("setValue: Passed")
+#     else:
+#         print("setValue: Failed")
