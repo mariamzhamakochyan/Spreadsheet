@@ -1,10 +1,10 @@
 from color import Color
+from datetime import datetime
 
 class Cell:
     def __init__(self, value = '', color = "white"):
         self.value = ''
         self.color = "white"
-        self.cl = {self.value:self.color}
     
     def setValue(self, value):
         self.value = str(value)
@@ -12,11 +12,6 @@ class Cell:
     
     def getValue(self):
         return str(self.value)
-        
-    def n(self,val,col):
-        val = getValue()
-        col = getColor()
-        self.cl = {val:col}
 
     def setColor(self, color):
         if co.sColor(color):
@@ -50,11 +45,19 @@ class Cell:
             print( "Value can not be a float")
     
     def toDate(self):
-        pass
+        res = True
+        date_string = self.value
+        try:
+            todate = datetime.strptime(date_string, '%Y-%m-%d')
+        except ValueError:
+            res = False
+        if res:
+            return todate
+        else:
+            print("Value can not have the format YYYY/MM/DD")
 
-    def reset(self, row, col):
+    def reset(self):
         self.value = ''
         self.color = 'white'
-        s.setCellAt(row, col)
 
 co = Color()
